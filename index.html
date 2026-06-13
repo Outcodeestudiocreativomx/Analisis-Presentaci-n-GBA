@@ -177,6 +177,33 @@ section{border-bottom:1px solid var(--mist)}
 .inversion-box .breakdown .row.total .l{color:#fff;font-family:var(--font-mono);font-size:10px;text-transform:uppercase;letter-spacing:.18em}
 .inversion-box .breakdown .row.total .v{color:var(--mustard);font-size:1.05rem}
 
+/* ═══ ACOMPAÑAMIENTO (NUEVA 04) ═══ */
+.acompanamiento-section{padding:120px 0;background:var(--ink);color:#fff;position:relative;overflow:hidden;border-bottom:1px solid var(--ink)}
+.acompanamiento-section::before{content:"";position:absolute;top:0;right:0;width:55%;height:100%;background:radial-gradient(ellipse at top right,rgba(201,162,39,.14),transparent 60%);pointer-events:none}
+.acompanamiento-section::after{content:"";position:absolute;bottom:0;left:0;width:240px;height:3px;background:linear-gradient(90deg,var(--mustard),transparent)}
+.acomp-grid{display:grid;grid-template-columns:1fr;gap:48px;align-items:start;position:relative}
+@media(min-width:1024px){.acomp-grid{grid-template-columns:5fr 7fr;gap:80px}}
+.acomp-headline .acomp-num{font-family:var(--font-display);font-weight:700;font-size:clamp(5rem,10vw,9rem);line-height:.8;letter-spacing:-.04em;opacity:.15;color:#fff;margin-bottom:8px;user-select:none}
+.acomp-headline .eyebrow{font-family:var(--font-mono);font-size:11px;text-transform:uppercase;letter-spacing:.2em;color:rgba(250,250,250,.65);margin-bottom:20px;display:flex;align-items:center;gap:12px}
+.acomp-headline .eyebrow::before{content:"";width:32px;height:1px;background:var(--mustard)}
+.acomp-headline h2{font-family:var(--font-display);font-weight:700;font-size:clamp(2.4rem,5vw,3.8rem);line-height:1;letter-spacing:-.025em;color:#fff;margin-bottom:24px;text-wrap:balance}
+.acomp-headline h2 em{font-style:normal;color:var(--mustard);position:relative;display:inline-block}
+.acomp-headline h2 em::after{content:"";position:absolute;left:0;right:0;bottom:4px;height:8px;background:rgba(201,162,39,.25);z-index:-1}
+.acomp-headline .lead{color:rgba(250,250,250,.85);font-size:1.1rem;line-height:1.6;max-width:48ch}
+.acomp-card{background:rgba(250,250,250,.05);border:1px solid rgba(250,250,250,.15);padding:40px;display:flex;flex-direction:column;gap:24px;backdrop-filter:blur(10px)}
+.acomp-card .head{display:flex;align-items:center;gap:14px;padding-bottom:20px;border-bottom:1px solid rgba(250,250,250,.12)}
+.acomp-card .head .icon{width:48px;height:48px;background:var(--mustard);color:var(--ink);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.acomp-card .head .icon svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.8}
+.acomp-card .head .label{font-family:var(--font-mono);font-size:10px;text-transform:uppercase;letter-spacing:.18em;color:rgba(250,250,250,.65)}
+.acomp-card .head .name{font-family:var(--font-display);font-weight:700;font-size:1.3rem;letter-spacing:-.01em;color:#fff}
+.acomp-list{display:flex;flex-direction:column;gap:18px}
+.acomp-item{display:flex;gap:14px;align-items:flex-start}
+.acomp-item .marker{width:8px;height:8px;background:var(--mustard);margin-top:10px;flex-shrink:0;transform:rotate(45deg)}
+.acomp-item p{color:rgba(250,250,250,.9);font-size:1rem;line-height:1.6;flex:1}
+.acomp-item p strong{color:#fff;font-weight:600}
+.acomp-badge{margin-top:8px;display:inline-flex;align-items:center;gap:8px;background:rgba(201,162,39,.15);border:1px solid rgba(201,162,39,.4);color:var(--mustard);font-family:var(--font-mono);font-size:10px;text-transform:uppercase;letter-spacing:.18em;padding:8px 14px;border-radius:999px;align-self:flex-start}
+.acomp-badge::before{content:"";width:6px;height:6px;background:var(--mustard);border-radius:50%;display:inline-block}
+
 /* ═══ INICIO RECOMENDADO ═══ */
 .inicio-grid{display:grid;grid-template-columns:1fr;gap:48px;align-items:start}
 @media(min-width:1024px){.inicio-grid{grid-template-columns:1.3fr 1fr;gap:80px}}
@@ -282,8 +309,10 @@ footer p+p{margin-top:4px}
       <a href="#minuta" data-link="minuta">01 · Minuta</a>
       <a href="#propuesta" data-link="propuesta">02 · Propuesta</a>
       <a href="#inversion" data-link="inversion">03 · Inversión</a>
-      <a href="#calendario" data-link="calendario">04 · Calendario</a>
-      <a href="#contacto" data-link="contacto">05 · Contacto</a>
+      <a href="#acompanamiento" data-link="acompanamiento">04 · Acompañamiento</a>
+      <a href="#inicio" data-link="inicio">05 · Inicio</a>
+      <a href="#calendario" data-link="calendario">06 · Calendario</a>
+      <a href="#contacto" data-link="contacto">07 · Contacto</a>
     </nav>
     <a href="#contacto" class="nav-cta">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:12px;height:12px"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
@@ -304,7 +333,7 @@ footer p+p{margin-top:4px}
       <div>
         <div class="cover-eyebrow reveal">Cliente · GB Automotriz</div>
         <h1 class="cover-h1 reveal stagger-1">Minuta y <em>Propuesta</em><br/>Económica.</h1>
-        <p class="cover-desc reveal stagger-2">Documento interactivo de servicios creativos para <strong style="color:var(--ink)">Agencia Automotriz del Noroeste / GB Automotriz</strong>. Análisis estratégico de Meta Ads, contenido visual y plan de ejecución bajo un solo estándar de calidad.</p>
+        <p class="cover-desc reveal stagger-2">Propuesta de servicios creativos y plan de acompañamiento para <strong style="color:var(--ink)">Agencia Automotriz del Noroeste / GB Automotriz</strong>.</p>
         <div class="cover-buttons reveal stagger-3">
           <a href="#propuesta" class="btn-primary">Ver propuesta
             <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
@@ -319,12 +348,12 @@ footer p+p{margin-top:4px}
       <div class="cover-side reveal stagger-3">
         <div class="cover-card">
           <span class="label">// Resumen ejecutivo</span>
-          <div class="big">$<em id="totalAnim">17,000</em> MXN <span style="font-size:.5em;color:rgba(250,250,250,.7)">+ IVA</span></div>
+          <div class="big">$<em id="totalAnim">16,000</em> MXN <span style="font-size:.5em;color:rgba(250,250,250,.7)">+ IVA</span></div>
           <p class="sub">Inversión total del proyecto: análisis estratégico + contenido visual para Meta Ads.</p>
           <div class="meta-row">
             <div>
               <span class="l">Anticipo</span>
-              <span class="v">$5,100</span>
+              <span class="v">$4,800</span>
             </div>
             <div>
               <span class="l">Inicio</span>
@@ -371,7 +400,7 @@ footer p+p{margin-top:4px}
       <div class="presente">
         <div class="org">Cliente</div>
         <div class="name">Karen Ahumada</div>
-        <div class="role">Representante de GB Automotriz</div>
+        <div class="role">Gerente de ventas GB Automotriz</div>
       </div>
       <div class="presente b">
         <div class="org">Proveedor</div>
@@ -413,11 +442,11 @@ footer p+p{margin-top:4px}
         <span class="badge">Core</span>
         <div class="num">// Servicio 02</div>
         <h3>Contenido visual<br/>para Meta Ads.</h3>
-        <p class="desc">Producción de piezas para Facebook e Instagram. El contenido podrá adaptarse a las necesidades comerciales del mes: promociones, modelos prioritarios, inventario disponible o campañas específicas.</p>
+        <p class="desc">Producción de creativos para Facebook e Instagram. El contenido podrá adaptarse a las necesidades comerciales del mes: promociones, modelos prioritarios, inventario disponible o campañas específicas.</p>
         <div class="precio">
           <div>
             <div class="label">Inversión</div>
-            <div class="monto">$12,750</div>
+            <div class="monto">$11,750</div>
           </div>
           <span class="iva">MXN + IVA</span>
         </div>
@@ -447,7 +476,7 @@ footer p+p{margin-top:4px}
               </div>
             </td>
             <td class="cantidad">4</td>
-            <td class="desc">Videos cortos enfocados en anuncios. Se podrán utilizar recursos creativos como cámaras, drone y otros apoyos visuales según la necesidad de cada pieza.</td>
+            <td class="desc">Videos cortos enfocados en anuncios. Se podrán utilizar recursos creativos como cámaras, drone y otros apoyos visuales según la necesidad de cada creativo.</td>
           </tr>
           <tr>
             <td>
@@ -457,7 +486,7 @@ footer p+p{margin-top:4px}
               </div>
             </td>
             <td class="cantidad">6</td>
-            <td class="desc">Piezas verticales para Facebook e Instagram.</td>
+            <td class="desc">Creativos verticales para Facebook e Instagram.</td>
           </tr>
           <tr>
             <td>
@@ -501,7 +530,7 @@ footer p+p{margin-top:4px}
       <div>
         <div class="total-label">// Inversión total del proyecto</div>
         <div class="total-num">
-          <span class="currency">$</span>17,000<span class="dec">.00</span><span class="tax">MXN + IVA</span>
+          <span class="currency">$</span>16,000<span class="dec">.00</span><span class="tax">MXN + IVA</span>
         </div>
         <p class="blanco">Suma de los dos servicios del alcance. No incluye inversión publicitaria ni gestión diaria de campañas.</p>
       </div>
@@ -512,22 +541,62 @@ footer p+p{margin-top:4px}
         </div>
         <div class="row">
           <span class="l">Contenido visual para Meta Ads</span>
-          <span class="v">$12,750 MXN</span>
+          <span class="v">$11,750 MXN</span>
         </div>
         <div class="row total">
           <span class="l">Total proyecto</span>
-          <span class="v">$17,000 MXN + IVA</span>
+          <span class="v">$16,000 MXN + IVA</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ 04 · INICIO RECOMENDADO (CORREGIDO) ═══ -->
+<!-- ═══ 04 · ACOMPAÑAMIENTO (NUEVO) ═══ -->
+<section id="acompanamiento" class="acompanamiento-section">
+  <div class="container">
+    <div class="acomp-grid">
+      <div class="acomp-headline">
+        <div class="acomp-num">04</div>
+        <div class="eyebrow">Sección · Acompañamiento</div>
+        <h2>Lo que viene después del <em>análisis.</em></h2>
+        <p class="lead">Producción de contenido estratégico con acompañamiento profesional. La propuesta está diseñada para arrancar con dirección y mantener el ritmo después de la primera entrega.</p>
+      </div>
+      <div class="acomp-card reveal">
+        <div class="head">
+          <div class="icon">
+            <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <div>
+            <div class="label">// Beneficio estratégico</div>
+            <div class="name">Acompañamiento continuo</div>
+          </div>
+        </div>
+        <div class="acomp-list">
+          <div class="acomp-item">
+            <div class="marker"></div>
+            <p>Se aplican <strong>precios especiales para Automotriz del Noroeste</strong> por iniciación de proyecto y puesta en marcha de nuevas estrategias.</p>
+          </div>
+          <div class="acomp-item">
+            <div class="marker"></div>
+            <p>Una vez realizado el análisis y puesta en marcha las estrategias con su equipo interno; habrá <strong>seguimiento mensual, resolución de dudas y observaciones en la gestión</strong>.</p>
+          </div>
+          <div class="acomp-item">
+            <div class="marker"></div>
+            <p>Se estima una <strong>valoración de resultados (análisis) en campañas cada tres meses</strong>.</p>
+          </div>
+        </div>
+        <div class="acomp-badge">Valoración trimestral</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 05 · INICIO RECOMENDADO (CORREGIDO) ═══ -->
 <section id="inicio" class="sec-pad" style="background:var(--bone)">
   <div class="container">
     <div class="sec-head">
-      <div class="sec-index">04</div>
+      <div class="sec-index">05</div>
       <div>
         <p class="sec-eyebrow reveal">Sección · Inicio recomendado</p>
         <h2 class="sec-title reveal stagger-1">Arranque inmediato.<br/>Plan de ejecución.</h2>
@@ -562,7 +631,7 @@ footer p+p{margin-top:4px}
           <div class="step-num">04</div>
           <div class="step-body">
             <h4>Producción y entrega</h4>
-            <p>Grabación + postproducción + entrega de piezas finales listas para pauta.</p>
+            <p>Grabación + postproducción + entrega de creativos finales listos para pauta.</p>
           </div>
         </div>
 
@@ -575,7 +644,7 @@ footer p+p{margin-top:4px}
       <div>
         <div class="anticipo-card">
           <div class="lbl">// Anticipo solicitado</div>
-          <div class="num">$5,100</div>
+          <div class="num">$4,800</div>
           <div class="desc">MXN + IVA · 30% del proyecto total, requerido para iniciar el análisis estratégico.</div>
         </div>
       </div>
@@ -583,11 +652,11 @@ footer p+p{margin-top:4px}
   </div>
 </section>
 
-<!-- ═══ 05 · CALENDARIO JULIO (TITULO CORREGIDO) ═══ -->
+<!-- ═══ 06 · CALENDARIO JULIO (TITULO CORREGIDO) ═══ -->
 <section id="calendario" class="sec-pad">
   <div class="container">
     <div class="sec-head">
-      <div class="sec-index">05</div>
+      <div class="sec-index">06</div>
       <div>
         <p class="sec-eyebrow reveal">Sección · Calendario</p>
         <h2 class="sec-title reveal stagger-1">Nota en caso de que se inicie<br/>a principios de Julio.</h2>
@@ -621,7 +690,7 @@ footer p+p{margin-top:4px}
         <p>Producción audiovisual según agenda disponible.</p>
       </div>
       <div class="tl-step c">
-        <div class="tl-week">Semana 4</div>
+        <div class="tl-week">Semana 3</div>
         <div class="tl-icon">
           <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
         </div>
@@ -632,11 +701,11 @@ footer p+p{margin-top:4px}
   </div>
 </section>
 
-<!-- ═══ 06 · CONSIDERACIONES ═══ -->
+<!-- ═══ 07 · CONSIDERACIONES ═══ -->
 <section id="consideraciones" class="sec-pad sec-dark">
   <div class="container">
     <div class="sec-head">
-      <div class="sec-index">06</div>
+      <div class="sec-index">07</div>
       <div>
         <p class="sec-eyebrow reveal">Sección · Consideraciones</p>
         <h2 class="sec-title reveal stagger-1">Lo que incluye<br/>y lo que no.</h2>
@@ -665,7 +734,7 @@ footer p+p{margin-top:4px}
   </div>
 </section>
 
-<!-- ═══ 07 · CONTACTO / CTA ═══ -->
+<!-- ═══ 08 · CONTACTO / CTA ═══ -->
 <section id="contacto" class="cta-section">
   <div class="container">
     <div class="cta-grid">
@@ -754,12 +823,12 @@ sections.forEach(s=>s&&navObserver.observe(s));
 // SMOOTH NUMBER COUNTER ON SCROLL (resumen)
 const resumenEl=document.getElementById('totalAnim');
 if(resumenEl){
-  const target=17000;let animated=false;
+  const target=16000;let animated=false;
   const numIO=new IntersectionObserver((es)=>{
     es.forEach(e=>{
       if(e.isIntersecting&&!animated){
         animated=true;let v=0;const step=target/60;
-        const tick=()=>{v+=step;if(v>=target){resumenEl.textContent='17,000';return;}resumenEl.textContent=Math.floor(v).toLocaleString('en-US');requestAnimationFrame(tick);};
+        const tick=()=>{v+=step;if(v>=target){resumenEl.textContent='16,000';return;}resumenEl.textContent=Math.floor(v).toLocaleString('en-US');requestAnimationFrame(tick);};
         tick();
       }
     });
